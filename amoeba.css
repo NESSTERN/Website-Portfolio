@@ -3,8 +3,12 @@
 	src: url("Assets/Fonts/contb.ttf") format("opentype");
 }
 @font-face {
-	font-family: "degheest"; 
-	src: url("Assets/Fonts/contb.ttf") format("opentype");
+	font-family: "Crystal"; 
+	src: url("Assets/Fonts/Crystal\ Radio\ Kit.otf") format("opentype");
+}
+@font-face {
+	font-family: "WII_small"; 
+	src: url("Assets/Fonts/contl.ttf") format("opentype");
 }
 
 html {
@@ -114,7 +118,7 @@ ul ul, ol ol {
 }
 
 p, table,  ul, ol, dl {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	line-height: 1.5;
 }
 
