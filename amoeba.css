@@ -66,7 +66,7 @@ img:hover {
 }
 
 *::-webkit-scrollbar-track {
-	background: #d2d3d8;
+	background: #f2f2f2;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -88,7 +88,7 @@ section {
 	padding: 1em 2em;
 	max-width: calc(100% - 10px);
 	background-color: #fefaf7;
-	border: 4px solid rgb(96, 183, 255);
+	border: 4px solid #60B7FF;
 	outline-offset: 5px;
 }
 
@@ -106,13 +106,13 @@ header {
 	max-width: calc(100% - 20px);
 	font-family: "WII_bold";
 	font-size: 50px;
-	color: rgb(96, 183, 255);
+	color: #60B7FF;
 	font-weight: normal;
 }
 
 header div {
 	margin: 32.5px 10px 0 20px;
-	text-shadow: 3px 3px #c0c0c0;
+	text-shadow: 3px 3px #e7e7e7;
 }
 
 footer {
@@ -133,9 +133,9 @@ nav a,
 	margin: 15px;
 	padding: 30px 15px;
 	border-radius: 30px;
-	border: 4px solid rgb(96, 183, 255);
+	border: 4px solid #60B7FF;
 	background-color: #fefaf7;
-	color: rgb(96, 183, 255);
+	color: #60B7FF;
 	text-decoration: none;
 	font-size: 26.5px;
 	cursor: url("Assets/Cursors/Help Select.cur"), pointer;
@@ -164,7 +164,7 @@ p, table, details, cite, pre, blockquote {
 h1, h2, h3 {
 	font-family: "WII_bold";
 	font-weight: normal;
-	color: #8A8A8A;
+	color: #7d7d7d;
 	text-shadow: 3px 3px #e7e7e7;
 }
 
@@ -175,7 +175,7 @@ h1 {
 
 h2 {
 	font-size: 3em;
-	color: #7d7d7d;
+	color: #39516b;
 }
 
 h3 { font-size: 2.5em; }
@@ -191,13 +191,13 @@ p, ul, ol, dl, table {
 
 a {
 	font-size: 1.25em;
-	color: #8B2635;
+	color: #39516b;
 	padding: 2px 4px;
 }
 
 a:hover {
-	background-color: rgb(96, 183, 255);
-	color: #f4f4f4;
+	background-color: #60B7FF;
+	color: #ffffff;
 }
 
 
@@ -216,8 +216,8 @@ ol ol {
 
 dt {
 	padding: 0.25rem 0.5rem;
-	color: #fefaf7;
-	background: linear-gradient(to right, #2E3532, #E0E2DB);
+	color: #ffffff;
+	background: linear-gradient(to right, #39516b, #f2f2f2);
 }
 
 dd {
@@ -229,9 +229,16 @@ dd {
    CONTENT ELEMENTS
 ========================= */
 
+#mes-jeux {
+    scroll-margin-top: 100px; /* ajuste la valeur selon la hauteur de ton header */
+}
+
+#Me-Myself-and-I {
+    scroll-margin-top: 500px; /* ajuste la valeur selon la hauteur de ton header */
+}
 blockquote {
 	padding-left: 1rem;
-	border-left: 3px solid #8B2635;
+	border-left: 3px solid #39516b;
 }
 
 cite {
@@ -240,8 +247,8 @@ cite {
 }
 
 code, pre {
-	background-color: #2E3532;
-	color: #E0E2DB;
+	background-color: #39516b;
+	color: #f2f2f2;
 }
 
 code {
@@ -256,7 +263,7 @@ pre {
 
 details {
 	padding: 1em;
-	border: 1px solid;
+	border: 1px solid #7d7d7d;
 }
 
 details p {
