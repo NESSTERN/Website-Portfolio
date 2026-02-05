@@ -1,18 +1,35 @@
+/* =========================
+   FONTS
+========================= */
+
 @font-face {
-	font-family: "WII_bold"; 
+	font-family: "WII_bold";
 	src: url("Assets/Fonts/contb.ttf") format("opentype");
 }
+
 @font-face {
-	font-family: "Crystal"; 
-	src: url("Assets/Fonts/Crystal\ Radio\ Kit.otf") format("opentype");
+	font-family: "WII_medium";
+	src: url("Assets/Fonts/contm.ttf") format("opentype");
 }
+
 @font-face {
-	font-family: "WII_small"; 
+	font-family: "WII_small";
 	src: url("Assets/Fonts/contl.ttf") format("opentype");
 }
+
 @font-face {
-	font-family: "WII_medium"; 
-	src: url("Assets/Fonts/contm.ttf") format("opentype");
+	font-family: "Crystal";
+	src: url("Assets/Fonts/Crystal Radio Kit.otf") format("opentype");
+}
+
+
+/* =========================
+   GLOBAL / RESET
+========================= */
+
+* {
+	box-sizing: border-box;
+	scrollbar-color: #60B7FF transparent;
 }
 
 html {
@@ -20,32 +37,46 @@ html {
 }
 
 body {
-	cursor: url(Assets/Cursors/Normal\ Select.cur), pointer;
-	font-family: "WII", serif; 
 	margin: 0;
 	padding: 0;
-	background: url(Assets/Backgrounds/css-pattern-by-magicpattern\ \(4\).png);
+	min-height: 800vh;
+	font-family: "WII_medium", serif;
 	color: #39516b;
-	background-color: #e7e7e7;
+	background-color: #fefaf7;
+	background-image: url("Assets/Backgrounds/css-pattern-by-magicpattern (4).png");
+	cursor: url("Assets/Cursors/Normal Select.cur"), pointer;
+}
+
+img {
+	max-width: 100%;
+}
+
+img:hover {
+	transform: scale(1.25);
 }
 
 
-* { 
-	box-sizing: border-box;
-	scrollbar-color: #60B7FF; border: transparent;
+/* =========================
+   SCROLLBAR
+========================= */
+
+*::-webkit-scrollbar {
+	width: 15px;
+	cursor: url("Assets/Cursors/Diagonal Resize 1.cur"), pointer;
 }
 
-*::-webkit-scrollbar { width: 15px; cursor: url(Assets/Cursors/Diagonal\ Resize\ 1.cur),pointer;}
-*::-webkit-scrollbar-track { background: #d2d3d8; }
-*::-webkit-scrollbar-thumb { background-color: #60B7FF	; border: url(Assets/Backgrounds/Main_background.png); }
-img { max-width: 100% }
-
-nav {
-	display: flex;
-	flex-wrap: wrap;
-	text-align: right;
-	justify-content: right;
+*::-webkit-scrollbar-track {
+	background: #d2d3d8;
 }
+
+*::-webkit-scrollbar-thumb {
+	background-color: #60B7FF;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
 
 main {
 	margin: 10px auto;
@@ -55,100 +86,155 @@ main {
 section {
 	margin: 2em auto;
 	padding: 1em 2em;
-	border: 1px dashed #A9ABA1;
-	outline: 1px dotted #A9ABA1;
-	outline-offset: 5px;
 	max-width: calc(100% - 10px);
+	background-color: #fefaf7;
+	border: 4px solid rgb(96, 183, 255);
+	outline-offset: 5px;
 }
 
-nav a, .up a {
-	cursor: url(Assets/Cursors/Help\ Select.cur), pointer;
-	color: rgb(96, 183, 255);
-	display: block;
-	border-radius: 30px;
-	border: 4px rgb(96, 183, 255) solid;
-	margin: 15px;
-	padding: 30px 15px;
-	text-decoration: none;
-	font-size: 26.5px;
-	background-color: rgb(0,0,0,0);
-}
-
-.up a {
-	cursor: url(Assets/Cursors/Alternate\ Select.cur), pointer;
-}
-
-hr {
-	border: none;
-	border-top: 1px solid #2E3532;
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	text-align: right;
 }
 
 header {
-	font-size: 50px;
-	margin: 10px;
 	display: flex;
 	justify-content: space-between;
-	font-family: 'WII_bold';
-	font-weight: normal;
-	color: rgb(96, 183, 255);
+	margin: 10px;
 	max-width: calc(100% - 20px);
+	font-family: "WII_bold";
+	font-size: 50px;
+	color: rgb(96, 183, 255);
+	font-weight: normal;
 }
 
-header div { margin: 32.5px 10px 0 20px; text-shadow: 3px 3px #c0c0c0; }
+header div {
+	margin: 32.5px 10px 0 20px;
+	text-shadow: 3px 3px #c0c0c0;
+}
 
-h1, h2, h3, h4, h5, h6, p, table, details, cite, pre, blockquote {
+footer {
+	margin: 2rem;
+	padding: 5px 10px;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+
+/* =========================
+   NAV / BUTTONS
+========================= */
+
+nav a,
+.up a {
+	display: block;
+	margin: 15px;
+	padding: 30px 15px;
+	border-radius: 30px;
+	border: 4px solid rgb(96, 183, 255);
+	background-color: #fefaf7;
+	color: rgb(96, 183, 255);
+	text-decoration: none;
+	font-size: 26.5px;
+	cursor: url("Assets/Cursors/Help Select.cur"), pointer;
+}
+
+.up a {
+	cursor: url("Assets/Cursors/Alternate Select.cur"), pointer;
+}
+
+.up {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1, h2, h3, h4, h5, h6,
+p, table, details, cite, pre, blockquote {
 	margin: 1rem 0;
 }
 
-h1, h2, h3, a { font-family: 'WII_bold'; font-weight: normal; }
+h1, h2, h3 {
+	font-family: "WII_bold";
+	font-weight: normal;
+	color: #8A8A8A;
+	text-shadow: 3px 3px #e7e7e7;
+}
 
-a { color: #8B2635; padding: 2px 4px; font-size: 1.25em; }
+h1 {
+	font-size: 3.75em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 3em;
+	color: #7d7d7d;
+}
+
+h3 { font-size: 2.5em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+p, ul, ol, dl, table {
+	font-family: "WII_medium";
+	font-size: 1.5rem;
+	line-height: 1.5;
+}
+
+a {
+	font-size: 1.25em;
+	color: #8B2635;
+	padding: 2px 4px;
+}
+
+a:hover {
+	background-color: rgb(96, 183, 255);
+	color: #f4f4f4;
+}
+
+
+/* =========================
+   LISTS
+========================= */
 
 ul, ol {
 	margin: 1rem 0 1rem 1.5rem;
 }
 
-dl { margin: 1rem 0; }
+ul ul,
+ol ol {
+	margin-left: 2rem;
+}
 
-dt { 
-	background: linear-gradient(to right, #2E3532, #E0E2DB);
+dt {
 	padding: 0.25rem 0.5rem;
-	color: #E0E2DB;
+	color: #fefaf7;
+	background: linear-gradient(to right, #2E3532, #E0E2DB);
 }
 
-dd { padding: 1rem; }
-
-ul ul, ol ol { 
-	margin: 0 0 0 2rem;
+dd {
+	padding: 1rem;
 }
 
-p, table,  ul, ol, dl {
-	font-family: 'WII_medium';
-	font-size: 1.5rem;
-	line-height: 1.5;
-}
 
-a:hover { 
-	background-color: rgb(96, 183, 255);
-	color:#ffffff;
-}
-
-img:hover {
-	transform: scale(1.5);
-}
-h6 { font-size: 1em; }
-h5 { font-size: 1.25em; }
-h4 { font-size: 1.5em; }
-h3 { font-size: 2.5em; }
-h2 { font-size: 3em; }
-h1 { font-size: 3.75em; text-align: center; }
+/* =========================
+   CONTENT ELEMENTS
+========================= */
 
 blockquote {
-	border-left: #8B2635 3px solid;
-	padding: 0 1rem;
+	padding-left: 1rem;
+	border-left: 3px solid #8B2635;
 }
 
-cite { 
+cite {
 	display: block;
 	text-align: right;
 }
@@ -158,58 +244,67 @@ code, pre {
 	color: #E0E2DB;
 }
 
-details { border: 1px solid; }
-
-code { 
-	font-family: 'Courier New', monospace; 
+code {
 	padding: 2px 4px;
+	font-family: "Courier New", monospace;
 }
 
-details, pre {
+pre {
 	padding: 1em;
+	overflow-x: auto;
 }
 
-pre { overflow-x: auto; }
+details {
+	padding: 1em;
+	border: 1px solid;
+}
 
-details p { margin: 0.5rem 0 0 2rem; }
+details p {
+	margin: 0.5rem 0 0 2rem;
+}
 
-table {	border: 3px solid #2E3532; margin: 1rem auto; }
-tr, td, th { border: 1px solid #2E3532; }
-td, th { padding: 0.5rem }
 
-figure {  display: table; margin: 1rem; }
+/* =========================
+   TABLES / FIGURES
+========================= */
 
-figure img { margin: 5px auto; }
+table {
+	margin: 1rem auto;
+}
 
-figcaption { 
+td, th {
+	padding: 0.5rem;
+}
+
+figure {
+	display: table;
+	margin: 1rem;
+}
+
+figcaption {
 	display: table-caption;
-    caption-side: bottom;
-    text-align: center;
+	caption-side: bottom;
+	text-align: center;
 }
 
-footer { 
-	font-size: 0.8em;
-	text-align: center; 
-	padding: 5px 10px;
-	margin: 2rem;
-}
 
-.up { position: fixed;
-	bottom: 10px; right: 10px; }
+/* =========================
+   FLEX GRID
+========================= */
 
 .flex-box {
-    display:flex;
-    flex-wrap:wrap;
-    margin: 0 auto;
-	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
 	align-items: flex-start;
+	margin: 0 auto;
+	padding: 0;
 }
 
 .flex-box section {
 	margin: 1em;
-	}
+}
 
-.full { flex: 1 1 100%;}
+.full { flex: 1 1 100%; }
 .half { flex: 1 1 calc(50% - 2em); }
 .third { flex: 1 1 calc(33% - 2em); }
 .twothird { flex: 1 1 calc(66% - 2em); }
@@ -217,27 +312,43 @@ footer {
 .threequarter { flex: 1 1 calc(75% - 2em); }
 
 
-@media screen and (max-width: 1270px){
-	.up { position: static; width: fit-content; margin: 10px auto; }
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 1080px) {
+	.up {
+		width: fit-content;
+		margin: 10px auto;
+	}
 }
 
-@media screen and (max-width: 700px){
-	header { flex-wrap: wrap; }
-	header div { margin: 5px; }
+@media screen and (max-width: 700px) {
+	header {
+		flex-wrap: wrap;
+	}
+
+	header div {
+		margin: 5px;
+	}
+
 	nav a {
 		margin: 5px;
 		padding: 15px 5px 2px 30px;
-		text-decoration: none;
 		font-size: 24px;
 	}
+
 	section {
 		margin: 1em auto;
 		padding: 0.5em 1em;
 	}
+
 	ul, ol {
-		margin: 1rem 0 1rem 0.5rem;
+		margin-left: 0.5rem;
 	}
-	ul ul, ol ol { 
-		margin: 0 0 0 1rem;
+
+	ul ul,
+	ol ol {
+		margin-left: 1rem;
 	}
 }
