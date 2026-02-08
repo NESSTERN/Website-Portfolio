@@ -29,7 +29,6 @@
 
 * {
 	box-sizing: border-box;
-	scrollbar-color: #60B7FF transparent;
 }
 
 html {
@@ -37,6 +36,7 @@ html {
 }
 
 body {
+	text-align: justify;
 	margin: 0;
 	padding: 0;
 	min-height: 800vh;
@@ -61,6 +61,7 @@ img:hover {
 ========================= */
 
 *::-webkit-scrollbar {
+	display: none;
 	width: 15px;
 	cursor: url("Assets/Cursors/Diagonal Resize 1.cur"), pointer;
 }
@@ -84,11 +85,12 @@ main {
 }
 
 section {
+	border-radius: 30px;
 	margin: 2em auto;
 	padding: 1em 2em;
 	max-width: calc(100% - 10px);
 	background-color: #fefaf7;
-	border: 4px solid #60B7FF;
+	border: 5px solid #60B7FF;
 	outline-offset: 5px;
 }
 
@@ -129,6 +131,7 @@ footer {
 
 nav a,
 .up a {
+	font-family: "WII_bold";
 	display: block;
 	margin: 15px;
 	padding: 30px 15px;
@@ -164,7 +167,7 @@ p, table, details, cite, pre, blockquote {
 h1, h2, h3 {
 	font-family: "WII_bold";
 	font-weight: normal;
-	color: #7d7d7d;
+	color: #60B7FF;
 	text-shadow: 3px 3px #e7e7e7;
 }
 
@@ -230,12 +233,25 @@ dd {
 ========================= */
 
 #mes-jeux {
-    scroll-margin-top: 100px; /* ajuste la valeur selon la hauteur de ton header */
+    scroll-margin-top: 20px; /* ajuste la valeur selon la hauteur de ton header */
 }
 
 #Me-Myself-and-I {
-    scroll-margin-top: 500px; /* ajuste la valeur selon la hauteur de ton header */
+    scroll-margin-top: 20px; /* ajuste la valeur selon la hauteur de ton header */
 }
+
+#top {
+	scroll-margin-top: 20px;
+}
+
+#autres-creations {
+	scroll-margin-top: 20px;
+}
+
+#me_contacter {
+	scroll-margin-top: 20px;
+}
+
 blockquote {
 	padding-left: 1rem;
 	border-left: 3px solid #39516b;
@@ -359,3 +375,15 @@ figcaption {
 		margin-left: 1rem;
 	}
 }
+
+.jeu-container {	
+	display: flex;
+	align-items: center; /* aligne verticalement */
+	gap: 20px; /* espace entre le texte et l’iframe */
+}
+
+.jeu-texte {
+	margin: 0;
+}
+
+
