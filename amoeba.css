@@ -209,6 +209,10 @@ nav a,
 	cursor: url("Assets/Cursors/Alternate Select.cur"), pointer;
 }
 
+.up:active, nav a:active{
+	transform: translateY(4px);
+}
+
 
 /* =========================
    TYPOGRAPHY
@@ -255,7 +259,6 @@ a {
 }
 
 a:hover {
-	transform: smooth(-4px);
 	background: #60B7FF;
 	color: #ffffff;
 	text-shadow: 3px 3px #60B7FF;
@@ -433,18 +436,18 @@ details p {
 	color: #60B7FF;
 	text-shadow: 2px 2px #e7e7e7;
 
-	box-shadow: 0 6px 0 #cfe9ff;
 	cursor: url("Assets/Cursors/cursor.cur"), auto;
 
-	transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-#me_contacter button:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 0 #cfe9ff;
-}
+
 
 #me_contacter button:active {
 	transform: translateY(4px);
-	box-shadow: 0 2px 0 #cfe9ff;
+}
+
+#me_contacter button:hover {
+	background: #60B7FF;
+	color: #ffffff;
+	text-shadow: 3px 3px #60B7FF;
 }
