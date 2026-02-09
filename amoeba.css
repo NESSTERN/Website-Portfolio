@@ -36,19 +36,23 @@ html {
 }
 
 body {
-	text-align: justify;
 	margin: 0;
 	padding: 0;
 	min-height: 800vh;
+
 	font-family: "WII_medium", serif;
 	color: #39516b;
+	text-align: justify;
+
 	background-color: #fefaf7;
 	background-image: url("Assets/Backgrounds/css-pattern-by-magicpattern (4).png");
+
 	cursor: url("Assets/Cursors/Normal Select.cur"), pointer;
 }
 
 img {
 	max-width: 100%;
+	transition: transform 0.2s ease;
 }
 
 img:hover {
@@ -84,14 +88,21 @@ main {
 	max-width: 60rem;
 }
 
-section {
-	border-radius: 30px;
-	margin: 2em auto;
-	padding: 1em 2em;
-	max-width: calc(100% - 10px);
-	background-color: #fefaf7;
-	border: 5px solid #60B7FF;
-	outline-offset: 5px;
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
+	max-width: calc(100% - 20px);
+
+	font-family: "WII_bold";
+	font-size: 50px;
+	font-weight: normal;
+	color: #60B7FF;
+}
+
+header div {
+	margin: 32.5px 10px 0 20px;
+	text-shadow: 3px 3px #e7e7e7;
 }
 
 nav {
@@ -99,22 +110,6 @@ nav {
 	flex-wrap: wrap;
 	justify-content: flex-end;
 	text-align: right;
-}
-
-header {
-	display: flex;
-	justify-content: space-between;
-	margin: 10px;
-	max-width: calc(100% - 20px);
-	font-family: "WII_bold";
-	font-size: 50px;
-	color: #60B7FF;
-	font-weight: normal;
-}
-
-header div {
-	margin: 32.5px 10px 0 20px;
-	text-shadow: 3px 3px #e7e7e7;
 }
 
 footer {
@@ -126,33 +121,64 @@ footer {
 
 
 /* =========================
+   SECTIONS – WII CHANNEL CARD
+========================= */
+
+section {
+	margin: 2em auto;
+	padding: 2rem;
+	max-width: calc(100% - 20px);
+	border-radius: 35px;
+
+	background: linear-gradient(to bottom, #ffffff, #f0f7ff);
+	border: 4px solid #60B7FF;
+
+	box-shadow:
+		0 8px 0 #cfe9ff,
+		inset 0 2px 0 #ffffff;
+
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+	transform: translateY(-4px);
+	box-shadow:
+		0 12px 0 #cfe9ff,
+		inset 0 2px 0 #ffffff;
+}
+
+
+/* =========================
    NAV / BUTTONS
 ========================= */
 
 nav a,
 .up a {
-	font-family: "WII_bold";
 	display: block;
 	margin: 15px;
 	padding: 30px 15px;
+
+	font-family: "WII_bold";
+	font-size: 26.5px;
+	text-decoration: none;
+	color: #60B7FF;
+
 	border-radius: 30px;
 	border: 4px solid #60B7FF;
 	background-color: #fefaf7;
 	text-shadow: 3px 3px #e7e7e7;
-	color: #60B7FF;
-	text-decoration: none;
-	font-size: 26.5px;
-	cursor: url("Assets/Cursors/Help Select.cur"), pointer;
-}
 
-.up a {
-	cursor: url("Assets/Cursors/Alternate Select.cur"), pointer;
+	cursor: url("Assets/Cursors/Help Select.cur"), pointer;
 }
 
 .up {
 	position: fixed;
 	bottom: 10px;
 	right: 10px;
+}
+
+.up a {
+	cursor: url("Assets/Cursors/Alternate Select.cur"), pointer;
 }
 
 
@@ -197,6 +223,7 @@ a {
 	font-size: 1.25em;
 	color: #39516b;
 	padding: 2px 4px;
+	cursor: url("Assets/Cursors/Help Select.cur"), pointer;
 }
 
 a:hover {
@@ -234,22 +261,10 @@ dd {
    CONTENT ELEMENTS
 ========================= */
 
-#mes-jeux {
-    scroll-margin-top: 20px; /* ajuste la valeur selon la hauteur de ton header */
-}
-
-#Me-Myself-and-I {
-    scroll-margin-top: 20px; /* ajuste la valeur selon la hauteur de ton header */
-}
-
-#top {
-	scroll-margin-top: 20px;
-}
-
-#autres-creations {
-	scroll-margin-top: 20px;
-}
-
+#mes-jeux,
+#Me-Myself-and-I,
+#top,
+#autres-creations,
 #me_contacter {
 	scroll-margin-top: 20px;
 }
@@ -290,30 +305,6 @@ details p {
 
 
 /* =========================
-   TABLES / FIGURES
-========================= */
-
-table {
-	margin: 1rem auto;
-}
-
-td, th {
-	padding: 0.5rem;
-}
-
-figure {
-	display: table;
-	margin: 1rem;
-}
-
-figcaption {
-	display: table-caption;
-	caption-side: bottom;
-	text-align: center;
-}
-
-
-/* =========================
    FLEX GRID
 ========================= */
 
@@ -338,54 +329,120 @@ figcaption {
 
 
 /* =========================
-   RESPONSIVE
+   JEU
 ========================= */
 
-@media screen and (max-width: 1080px) {
-	.up {
-		width: fit-content;
-		margin: 10px auto;
-	}
-}
-
-@media screen and (max-width: 700px) {
-	header {
-		flex-wrap: wrap;
-	}
-
-	header div {
-		margin: 5px;
-	}
-
-	nav a {
-		margin: 5px;
-		padding: 15px 5px 2px 30px;
-		font-size: 24px;
-	}
-
-	section {
-		margin: 1em auto;
-		padding: 0.5em 1em;
-	}
-
-	ul, ol {
-		margin-left: 0.5rem;
-	}
-
-	ul ul,
-	ol ol {
-		margin-left: 1rem;
-	}
-}
-
-.jeu-container {	
+.jeu-container {
 	display: flex;
-	align-items: center; /* aligne verticalement */
-	gap: 20px; /* espace entre le texte et l’iframe */
+	align-items: center;
+	gap: 20px;
 }
 
 .jeu-texte {
 	margin: 0;
 }
 
+
+/* =========================
+   FORM – WII CHANNEL
+========================= */
+
+#me_contacter form {
+	max-width: 520px;
+	margin: 2rem auto;
+	padding: 2.5rem 2rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1.4rem;
+
+	border-radius: 35px;
+	border: 4px solid #60B7FF;
+
+	background: linear-gradient(to bottom, #ffffff, #f0f7ff);
+
+	box-shadow:
+		0 8px 0 #cfe9ff,
+		inset 0 2px 0 #ffffff;
+
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#me_contacter form:hover {
+	transform: translateY(-4px);
+	box-shadow:
+		0 12px 0 #cfe9ff,
+		inset 0 2px 0 #ffffff;
+}
+
+#me_contacter label {
+	display: flex;
+	align-items: center;          /* centre verticalement */
+	gap: 1rem;                    /* espace entre label et champ */
+
+	font-family: "WII_bold";
+	font-size: 1.2rem;
+	color: #60B7FF;
+	text-shadow: 2px 2px #e7e7e7;
+}
+
+#me_contacter input,
+#me_contacter textarea {
+	margin-top: 0.4rem;
+	padding: 12px 16px;
+
+	border-radius: 18px;
+	border: 3px solid #bfe3ff;
+	background-color: #ffffff;
+
+	font-family: "WII_medium";
+	font-size: 1.1rem;
+	color: #39516b;
+
+	box-shadow: inset 0 3px 0 #f0f0f0;
+	outline: none;
+}
+
+#me_contacter input:focus,
+#me_contacter textarea:focus {
+	border-color: #60B7FF;
+	box-shadow:
+		inset 0 3px 0 #f0f0f0,
+		0 0 0 3px #cfe9ff;
+}
+
+#me_contacter textarea {
+	min-height: 140px;
+	resize: vertical;
+}
+
+#me_contacter button {
+	margin: 1.5rem auto 0;
+	padding: 16px 50px;
+
+	border-radius: 40px;
+	border: 4px solid #60B7FF;
+
+	background: linear-gradient(to bottom, #ffffff, #e6f4ff);
+
+	font-family: "WII_bold";
+	font-size: 1.6rem;
+	color: #60B7FF;
+	text-shadow: 2px 2px #e7e7e7;
+
+	box-shadow: 0 6px 0 #cfe9ff;
+	cursor: url("Assets/Cursors/Help Select.cur"), pointer;
+
+	transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#me_contacter button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 0 #cfe9ff;
+}
+
+#me_contacter button:active {
+	transform: translateY(4px);
+	box-shadow: 0 2px 0 #cfe9ff;
+}
 
