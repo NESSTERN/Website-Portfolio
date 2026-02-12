@@ -38,7 +38,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	min-height: 800vh;
+	min-height: 500vh;
 
 	font-family: "WII_medium", serif;
 	color: #39516b;
@@ -240,7 +240,7 @@ h2 {
 	color: #39516b;
 }
 
-h3 { font-size: 2.5em; }
+h3 { font-size: 2.5em; text-align: center;}
 h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
@@ -388,7 +388,7 @@ details p {
 #me_contacter input,
 #me_contacter textarea {
 	cursor: url("Assets/Cursors/Handwriting.cur"), auto;
-	width: 80%;       /* largeur uniforme */
+	width: 150%;       /* largeur uniforme */
 	max-width: 400px; /* limite sur grand écran */
 	margin-top: 0.4rem;
 	padding: 12px 16px;
