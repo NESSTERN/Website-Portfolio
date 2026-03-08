@@ -53,10 +53,13 @@ body {
 img {
 	max-width: 100%;
 	transition: transform 0.2s ease;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 img:hover {
-	transform: scale(1.25);
+	transform: scale(1.15);
 }
 
 
